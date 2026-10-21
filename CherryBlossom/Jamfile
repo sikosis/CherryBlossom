@@ -1,0 +1,22 @@
+SubDir HAIKU_TOP src apps cherryblossom ;
+
+UsePublicHeaders [ FDirName be_apps ] ;
+
+local sourceDirs =
+	src
+	src/views
+;
+
+local sourceDir ;
+for sourceDir in $(sourceDirs) {
+	SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src apps cherryblossom
+		$(sourceDir) ] ;
+}
+
+Application CherryBlossom :
+	CherryBlossom.cpp
+	CherryBlossomWindow.cpp
+	MusicView.cpp
+	PlayListView.cpp
+	: be $(TARGET_LIBSUPC++)
+;
