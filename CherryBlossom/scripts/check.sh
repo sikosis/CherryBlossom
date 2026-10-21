@@ -15,6 +15,7 @@ done
 
 if grep -R -n -E '[[:blank:]]+$' \
 		"$project_directory/README.md" \
+		"$project_directory/Makefile" \
 		"$project_directory/Jamfile" \
 		"$project_directory/src/CherryBlossom.cpp" \
 		"$project_directory/src/CherryBlossom.h" \

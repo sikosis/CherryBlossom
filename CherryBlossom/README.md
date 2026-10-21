@@ -15,16 +15,17 @@ implemented.
 On Haiku, build with the platform's Generic Makefile engine:
 
 ```sh
-cd src
 make
 ```
 
 The resulting `CherryBlossom` application is written to the `src` directory.
 
-Run all checks (and the build when running on Haiku) with:
+Run all checks (and the build when running on Haiku) or remove build output
+with:
 
 ```sh
-./scripts/check.sh
+make check
+make clean
 ```
 
 ## Historical source
